@@ -29,13 +29,20 @@ public class SphereScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+
         if (!isGameOver)
         {
-            if (this.transform.position.y < -3)
+            Debug.Log(collision.gameObject.name);
+            if (collision.gameObject.name == "Floor")
             {
-                Debug.Log("ゲームオーバー");
+                Debug.Log("Game Over");
                 isGameOver = true;
             }
         }
+
     }
 }
