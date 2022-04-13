@@ -5,6 +5,7 @@ using UnityEngine;
 public class SphereScript : MonoBehaviour
 {
     public bool isGameOver;
+    public GameObject controller;
     public GameObject canvas;
     public Rigidbody rigidbody;
 
@@ -12,6 +13,10 @@ public class SphereScript : MonoBehaviour
     void Start()
     {
         isGameOver = false;
+
+        controller = GameObject.Find("Controller");
+        controller.GetComponent<TestCubeBehaviourScript>().canMove = true;
+        
         canvas = GameObject.Find("Canvas");
         canvas.GetComponent<Canvas>().enabled = false;
 
@@ -37,6 +42,8 @@ public class SphereScript : MonoBehaviour
 
                 rigidbody.velocity = Vector3.zero;
                 rigidbody.angularVelocity = Vector3.zero;
+                
+                controller.GetComponent<TestCubeBehaviourScript>().canMove = false;
 
                 canvas.GetComponent<Canvas>().enabled = true;
                 isGameOver = true;
@@ -47,7 +54,6 @@ public class SphereScript : MonoBehaviour
 
     public void SetStartPosition()
     {
-        Debug.Log("SetStartPosition");
         
         // 乱数でスタート位置を決める
         int value = Random.Range(0, 10 + 1);
