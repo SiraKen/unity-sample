@@ -760,7 +760,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1304146496}
-  m_Material: {fileID: 13400000, guid: 2ae0cf01310d5bc4b83f1d5b09bdba5d, type: 2}
+  m_Material: {fileID: 13400000, guid: 5cb49ad1a31b729498f346ce7e15f5a4, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -990,7 +990,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1808397956}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 31aacba4cdf1da643ad2705b8df69e16, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1102,6 +1102,7 @@ GameObject:
   - component: {fileID: 1841395531}
   - component: {fileID: 1841395530}
   - component: {fileID: 1841395529}
+  - component: {fileID: 1841395534}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -1132,7 +1133,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1841395528}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 31aacba4cdf1da643ad2705b8df69e16, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1199,3 +1200,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1841395534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841395528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 612b312807243dd41a6e5a342894609b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  mousePos: {x: 0, y: 0, z: 0}
+  moveSpeed: 1
+  SwipeSpeed: 0
