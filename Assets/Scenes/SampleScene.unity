@@ -1034,7 +1034,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1304146502}
-        m_MethodName: SetStartPosition
+        m_MethodName: Initialize
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1311,7 +1311,9 @@ MonoBehaviour:
   isGameOver: 0
   controller: {fileID: 0}
   canvas: {fileID: 0}
+  scoreText: {fileID: 0}
   rigidbody: {fileID: 0}
+  score: 0
 --- !u!1 &1319312365
 GameObject:
   m_ObjectHideFlags: 0

@@ -26,7 +26,7 @@ public class SphereScript : MonoBehaviour
 
         rigidbody = GetComponent<Rigidbody>();
 
-        SetStartPosition();
+        Initialize();
     }
 
     // Update is called once per frame
@@ -64,9 +64,12 @@ public class SphereScript : MonoBehaviour
 
     }
 
-    public void SetStartPosition()
+    public void Initialize()
     {
-        
+        score = 0;
+        string scoreString = score.ToString();
+        scoreText.GetComponent<TextMesh>().text = scoreString;
+
         // 乱数でスタート位置を決める
         int value = Random.Range(0, 10 + 1);
 
