@@ -7,7 +7,9 @@ public class SphereScript : MonoBehaviour
     public bool isGameOver;
     public GameObject controller;
     public GameObject canvas;
+    public GameObject scoreText;
     public Rigidbody rigidbody;
+    public int score = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +21,8 @@ public class SphereScript : MonoBehaviour
         
         canvas = GameObject.Find("Canvas");
         canvas.GetComponent<Canvas>().enabled = false;
+
+        scoreText = GameObject.Find("ScoreText");
 
         rigidbody = GetComponent<Rigidbody>();
 
@@ -36,6 +40,14 @@ public class SphereScript : MonoBehaviour
         if (!isGameOver)
         {
             Debug.Log(collision.gameObject.name);
+
+            if (collision.gameObject.name == "Controller")
+            {
+                score += 1;
+                string scoreString = score.ToString();
+                scoreText.GetComponent<TextMesh>().text = scoreString;
+            }
+
             if (collision.gameObject.name == "Floor")
             {
                 Debug.Log("Game Over");
