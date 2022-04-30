@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class SphereScript : MonoBehaviour
 {
@@ -45,7 +46,7 @@ public class SphereScript : MonoBehaviour
             {
                 score += 1;
                 string scoreString = score.ToString();
-                scoreText.GetComponent<TextMesh>().text = scoreString;
+                scoreText.GetComponent<TextMeshPro>().text = scoreString;
             }
 
             if (collision.gameObject.name == "Floor")
@@ -68,7 +69,7 @@ public class SphereScript : MonoBehaviour
     {
         score = 0;
         string scoreString = score.ToString();
-        scoreText.GetComponent<TextMesh>().text = scoreString;
+        scoreText.GetComponent<TextMeshPro>().text = scoreString;
 
         // 乱数でスタート位置を決める
         int value = Random.Range(0, 10 + 1);
